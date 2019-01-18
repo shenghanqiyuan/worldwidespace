@@ -18,6 +18,7 @@
 @property(nonatomic,strong) NSMutableArray *frameModelArray;
 @end
 
+
 @implementation FirstViewController
 -(NSMutableArray *)frameModelArray
 {
@@ -35,7 +36,7 @@
         _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0 , 0, WIDTH , HEIGHT - 64) style:UITableViewStylePlain];
         [_tableView registerClass:[TestTableViewCell class] forCellReuseIdentifier:@"TestTableViewCellId"];
         _tableView.backgroundColor = [UIColor whiteColor];
-//        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.estimatedRowHeight = 80;
         _tableView.rowHeight = UITableViewAutomaticDimension;
         _tableView.delegate = self;
